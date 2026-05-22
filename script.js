@@ -11,7 +11,7 @@ function renderTasks() {
       <span class="${task.done ? 'done' : ''}" onclick="toggleTask(${index})">
         ${task.text}
       </span>
-      <button onclick="deleteTask(${index})">❌</button>
+      <button onclick="deleteTask(${index})">Elimina</button>
     `;
 
     list.appendChild(li);
