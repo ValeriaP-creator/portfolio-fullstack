@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Il mio Portfolio</h1>
+<p>Junior Full Stack Developer</p>
+<p>Progetti in sviluppo per crescita professionale</p>
+
+<input id="taskInput" placeholder="Scrivi task">
+<button onclick="addTask()">Aggiungi</button>
+
+<ul id="taskList"></ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>
