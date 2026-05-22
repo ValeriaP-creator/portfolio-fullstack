@@ -8,10 +8,19 @@ function renderTasks() {
     const li = document.createElement("li");
 
     li.innerHTML = `
-      <span class="${task.done ? 'done' : ''}" onclick="toggleTask(${index})">
+      <span class="${task.done ? 'done' : ''}">
         ${task.text}
       </span>
-      <button onclick="deleteTask(${index})">Elimina</button>
+
+      <div>
+        <button onclick="toggleDone(${index})">
+          ${task.done ? "↩️" : "✔️"}
+        </button>
+
+        <button onclick="deleteTask(${index})">
+          ❌
+        </button>
+      </div>
     `;
 
     list.appendChild(li);
@@ -25,7 +34,10 @@ function addTask() {
 
   if (input.value.trim() === "") return;
 
-  tasks.push({ text: input.value, done: false });
+  tasks.push({
+    text: input.value,
+    done: false
+  });
 
   input.value = "";
   renderTasks();
@@ -36,7 +48,7 @@ function deleteTask(index) {
   renderTasks();
 }
 
-function toggleTask(index) {
+function toggleDone(index) {
   tasks[index].done = !tasks[index].done;
   renderTasks();
 }

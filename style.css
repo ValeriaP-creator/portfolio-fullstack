@@ -48,4 +48,7 @@ li {
 .done {
   text-decoration: line-through;
   opacity: 0.6;
+}.done {
+  text-decoration: line-through;
+  opacity: 0.6;
 }
