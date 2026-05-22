@@ -14,11 +14,11 @@ function renderTasks() {
 
       <div>
         <button onclick="toggleDone(${index})">
-          ${task.done ? "↩️" : "✔️"}
+          ${task.done ? "ripristina" : "completato"}
         </button>
 
         <button onclick="deleteTask(${index})">
-          ❌
+          elimina
         </button>
       </div>
     `;
